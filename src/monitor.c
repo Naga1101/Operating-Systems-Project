@@ -60,7 +60,7 @@ void removeElemPE(processosExec **Status, int pid){
         anterior = pt;
         pt = pt->prox;
     }
-    if(pt == NULL) printf("Algo fudeu esta a remover uma cena que não existe\n");
+    if(pt == NULL) return -1;
     if(anterior == NULL) aux = pt->prox;
     else anterior->prox = pt->prox;
     free(pt);
